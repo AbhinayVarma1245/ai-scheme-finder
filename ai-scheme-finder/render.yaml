@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: sarkari-sahayak-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Set this to your frontend URL after deploying frontend first:
+      # - key: ALLOWED_ORIGIN
+      #   value: https://your-app.netlify.app
+    plan: free
